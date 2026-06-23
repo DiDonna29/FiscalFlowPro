@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-dashboard",
+      "description": "Digital tax management dashboard",
+      "imageUrl": "https://picsum.photos/seed/taxflow1/1200/800",
+      "imageHint": "tax dashboard"
+    },
+    {
+      "id": "feature-automated",
+      "description": "Automated accounting illustration",
+      "imageUrl": "https://picsum.photos/seed/taxflow2/600/400",
+      "imageHint": "automation digital"
+    }
+  ]
 }
