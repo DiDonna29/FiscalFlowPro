@@ -55,8 +55,22 @@
   }
   body {
     @apply bg-background text-foreground transition-colors duration-300;
+    /* Seguridad contra desbordamiento global */
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   html {
     scroll-behavior: smooth;
+  }
+  
+  /* Asegurar que los contenedores hijos nunca rompan al padre */
+  div, section, main, footer {
+    max-width: 100%;
+  }
+
+  /* Números tabulares para dashboard y consistencia visual */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
   }
 }

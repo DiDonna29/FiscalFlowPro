@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -20,31 +19,31 @@ export function Hero() {
 
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            New: Version 2.0 Released
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6 animate-fade-in max-w-full">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0" />
+            <span className="truncate">New: Version 2.0 Released</span>
           </div>
           
-          <h1 className="text-4xl md:text-7xl font-headline font-extrabold tracking-tight mb-6 leading-[1.1]">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-headline font-extrabold tracking-tight mb-6 leading-[1.1] break-words">
             {t.hero.title}
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed break-words">
             {t.hero.subtitle}
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button size="lg" className="h-14 px-8 text-lg font-bold rounded-full group">
-              {t.hero.ctaPrimary}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 px-4">
+            <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-lg font-bold rounded-full group shrink-0">
+              <span className="truncate">{t.hero.ctaPrimary}</span>
               <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-bold rounded-full bg-background/50 backdrop-blur-sm">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg font-bold rounded-full bg-background/50 backdrop-blur-sm shrink-0">
               <Play className="mr-2 h-4 w-4 fill-current" />
-              {t.hero.ctaSecondary}
+              <span className="truncate">{t.hero.ctaSecondary}</span>
             </Button>
           </div>
 
-          <div className="relative mx-auto max-w-5xl rounded-2xl border bg-card shadow-2xl p-2 md:p-4 overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-1000">
+          <div className="relative mx-auto max-w-5xl rounded-2xl border bg-card shadow-2xl p-2 md:p-4 overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-1000 w-full">
             <div className="aspect-[16/9] relative rounded-lg overflow-hidden border">
               <Image 
                 src="https://picsum.photos/seed/taxflow1/1200/800"
@@ -55,8 +54,8 @@ export function Hero() {
               />
             </div>
             {/* Decorative elements */}
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
           </div>
         </div>
       </div>
